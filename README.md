@@ -108,11 +108,16 @@ El análisis se centra en las siguientes áreas clave:
 
 1. **Ingresos por Categoría**: Se identificaron las categorías de productos con mayores ingresos mediante agrupaciones (`.groupby()`) y análisis comparativos. Esto permitió visualizar qué categorías generan más valor, enfocado a decisiones de marketing.
 
-2. **Descuentos por Categoría**: Análisis de los descuentos promedio aplicados a cada categoría mediante `.mean()`, visualizados con gráficos de barras (`seaborn.barplot()`). Esto ayudó a identificar las categorías con descuentos más agresivos y su impacto en las ventas.
+2. **Distribución del porcentaje de descuento por categoría y subcategoría.**
+La distribución del porcentaje de descuento por categoría y subcategoría revelará qué categorías y subcategorías ofrecen el mayor rango de porcentajes de descuento. También puede revelar qué categorías y subcategorías ofrecen el mayor porcentaje promedio de descuentos.
+
+![Descuentos por Subcategoria](https://drive.google.com/uc?export=view&id=1Q32qz5DbhUlC8RYvCGrRIdSKrSFoeW36)
 
 3. **Interacción del Cliente**: Evaluación de la interacción del cliente a través de `rating_count` y `rating`. Se utilizaron histogramas y curvas de densidad (`seaborn.histplot()`) para entender cómo las calificaciones afectan el compromiso de los clientes.
 
 4. **Matriz de Correlación**: Creación de una matriz de correlación (`.corr()`) visualizada con `seaborn.heatmap()` para analizar cómo se relacionan las diferentes variables del conjunto de datos.
+
+![Matriz de Correlación](https://drive.google.com/uc?export=view&id=1CYL9AQFprTlbl2WU3NEpf39NIL0es3-u)
 
 5. **Gráfico de Dispersión**: Se generó un gráfico de dispersión con `seaborn.scatterplot()` para visualizar la correlación entre el precio real (`actual_price`) y el precio con descuento (`discounted_price`). Esto permitió analizar cómo los descuentos influyen en el precio final.
 
