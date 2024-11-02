@@ -121,9 +121,7 @@ La distribución del porcentaje de descuento por categoría y subcategoría reve
 
 5. **Gráfico de Dispersión**: Se generó un gráfico de dispersión con `seaborn.scatterplot()` para visualizar la correlación entre el precio real (`actual_price`) y el precio con descuento (`discounted_price`). Esto permitió analizar cómo los descuentos influyen en el precio final.
 
-6. **Modelo de Regresión Lineal**: Se desarrolló un modelo para predecir los precios con descuento en función de variables como `actual_price`, `discount_percent` y `rating`. Utilizando `LinearRegression()`, se ajustaron los datos y se evaluaron con métricas clave (R², RMSE). Un modelo robusto adicional se aplicó para corregir problemas de heteroscedasticidad, garantizando la fiabilidad de los resultados mediante errores estándar HC3 (`get_robustcov_results()`).
-
-Este enfoque permitió identificar patrones clave en ventas, comportamiento del cliente y estrategias de descuento, proporcionando información valiosa para la toma de decisiones empresariales informadas.
+![Grafico de dispersion](https://drive.google.com/uc?export=view&id=1AumSbwx5p1k7ziyQMIFOV22t3L67Kl8f)
 
 ## Resultados
 
@@ -135,9 +133,16 @@ El análisis realizado produjo varios hallazgos clave que proporcionan una visi�
 
 3. **Compromiso del Cliente**: Los productos con mayores `rating_count` y `rating` mostraron una correlación positiva con las ventas. Los histogramas y gráficos de densidad revelaron que la mayoría de los productos con mayores calificaciones también presentaron un alto volumen de ventas, indicando un mayor compromiso del cliente.
 
-4. **Predicciones de Precios con el Modelo de Regresión**: El modelo de regresión lineal mostró que `actual_price`, `discount_percent`, y `rating` son factores significativos para predecir los precios con descuento. Estos factores demostraron ser consistentes en el análisis de validación cruzada, lo que proporciona una fuerte confianza en la fiabilidad del modelo.
+![calificación promedio por categoría y subcategoría](https://drive.google.com/uc?export=view&id=1XQuMcgWaDOHVJoChzSGZkSXxpp4E5mPa)
+
+4. **Predicciones de Precios con el Modelo de Regresión**: El modelo de regresión lineal mostró que `actual_price` y `discount_percentage`, son factores significativos para predecir los precios con descuento. Estos factores demostraron ser consistentes en el análisis de validación cruzada, lo que proporciona una fuerte confianza en la fiabilidad del modelo.
 
 ## Conclusión
+
+**Modelo de Regresión Lineal Robusto**: Se desarrolló un modelo para predecir los precios con descuento en función de variables como `actual_price` y  `discount_percentage`. Utilizando `Regresión Lineal Robust()`, se ajustaron los datos y se evaluaron con métricas clave (R², RMSE). Un modelo robusto adicional se aplicó para corregir problemas de heteroscedasticidad, garantizando la fiabilidad de los resultados mediante errores estándar HC3 (`get_robustcov_results()`).
+
+![Metrica RL modelo robusto](https://drive.google.com/uc?export=view&id=1erQGjtuLkpz7_Qz93ne0rDzNqiGm6yfM)
+
 
 **El análisis entre `actual_price` y `discounted_price` muestra una relación fuerte y lineal.** El modelo desarrollado para predecir el precio con descuento (Y) basado en el precio real (X) resulta en la ecuación **Y = 0.613X + -2.804.** Esto indica que **por cada incremento de 1 Euro en el precio real, el precio con descuento aumenta en 0.613 Euros.**
 
