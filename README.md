@@ -170,7 +170,7 @@ El análisis realizado produjo varios hallazgos clave que proporcionan una visi�
 El modelo de regresión lineal desarrollado se guardó en disco para su futuro uso mediante la librería `pickle`. Esto permite reutilizar el modelo sin necesidad de volver a entrenarlo, facilitando su integración en sistemas de recomendación o aplicaciones web. El siguiente código fue utilizado para guardar el modelo:
 
 ```python
-# Paso 10: Guardar el modelo en disco utilizando pickle
+# Guardar el modelo en disco utilizando pickle
 filename = 'model.pkl'
 try:
     with open(filename, 'wb') as file:
