@@ -25,7 +25,7 @@ El análisis se enfocará en áreas como el impacto de los descuentos en las ven
 
 ## Datos
 
-El conjunto de datos utilizado en este proyecto incluye información detallada sobre más de 1000 productos vendidos en Amazon, abarcando aspectos como el precio, la calificación, las reseñas de los clientes, y la descripción de los productos. Los datos para este análisis han sido proporcionados inicialmente por Kaggle y están almacenados en el archivo `amazon.csv`.
+El conjunto de datos utilizado en este proyecto incluye información detallada sobre más de 1000 productos vendidos en Amazon, abarcando aspectos como el precio, la calificación, las reseñas de los clientes, y la descripción de los productos. Los datos para este análisis están almacenados en el archivo `amazon.csv`.link: https://github.com/Esniak/-EDA-Amazon-Sales/tree/main/Data/Raw
 
 ### Archivo de Datos
 
