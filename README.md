@@ -188,3 +188,13 @@ except Exception as e:
     raise
 ```
 
+## Link notebook completo en inglés
+## Full Notebook in English
+
+Si prefieres revisar el contenido en inglés o tienes alguna dificultad con la versión en español, puedes consultar el notebook completo en inglés en el enlace que te dejamos a continuación:
+
+If you prefer to review the content in English or encounter any difficulties with the Spanish version, you can check the complete notebook in English at the link below:
+
+[Full Notebook in English](https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/(EDA)_Ventas_Amazon_EN.ipynb)
+
+
