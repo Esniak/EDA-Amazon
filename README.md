@@ -10,14 +10,14 @@ La solución obtenida permitirá identificar patrones y tendencias en las ventas
 
 1. [Introduction](#introduction)
 2. [Data](#data)
-3. [Resumen del codigo](#Resumen del codigo)
+3. [Resumen del código](#resumen-del-codigo)
 4. [Methodology](#methodology)
 5. [Analysis](#analysis)
 6. [Results](#results)
 7. [Conclusion](#conclusion)
 8. [Recommendations](#recommendations)
 9. [Deployment](#deployment)
-10. [Link notebook completo en ingles](#Link notebook completo en ingles)
+10. [Link notebook completo en inglés](#link-notebook-completo-en-ingles)
 
 ## Introducción
 
