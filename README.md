@@ -111,32 +111,32 @@ La metodología de este proyecto incluye los siguientes pasos:
 
 El análisis se centra en las siguientes áreas clave:
 
-1. **Ingresos por Categoría**: Se identificaron las categorías de productos con mayores ingresos mediante agrupaciones (`.groupby()`) y análisis comparativos. Esto permitió visualizar qué categorías generan más valor, enfocado a decisiones de marketing.
+**Matriz de Correlación**: Creación de una matriz de correlación (`.corr()`) visualizada con `seaborn.heatmap()` para analizar cómo se relacionan las diferentes variables del conjunto de datos.
 
-2. **Distribución del porcentaje de descuento por categoría y subcategoría.**
+![Matriz de Correlación](https://drive.google.com/uc?export=view&id=1CYL9AQFprTlbl2WU3NEpf39NIL0es3-u)
+
+**Gráfico de Dispersión**: Se generó un gráfico de dispersión con `seaborn.scatterplot()` para visualizar la correlación entre el precio real (`actual_price`) y el precio con descuento (`discounted_price`). Esto permitió analizar cómo los descuentos influyen en el precio final.
+
+![Grafico de dispersion](https://drive.google.com/uc?export=view&id=1AumSbwx5p1k7ziyQMIFOV22t3L67Kl8f)
+
+**Ingresos por Categoría**: Se identificaron las categorías de productos con mayores ingresos mediante agrupaciones (`.groupby()`) y análisis comparativos. Esto permitió visualizar qué categorías generan más valor, enfocado a decisiones de marketing.
+
+**Distribución del porcentaje de descuento por categoría y subcategoría.**
 La distribución del porcentaje de descuento por categoría y subcategoría revelará qué categorías y subcategorías ofrecen el mayor rango de porcentajes de descuento. También puede revelar qué categorías y subcategorías ofrecen el mayor porcentaje promedio de descuentos.
 
 ![Descuentos por Subcategoria](https://drive.google.com/uc?export=view&id=1Q32qz5DbhUlC8RYvCGrRIdSKrSFoeW36)
 
-3. **Interacción del Cliente**: Evaluación de la interacción del cliente a través de `rating_count` y `rating`. Se utilizaron histogramas y curvas de densidad (`seaborn.histplot()`) para entender cómo las calificaciones afectan el compromiso de los clientes.
-
-4. **Matriz de Correlación**: Creación de una matriz de correlación (`.corr()`) visualizada con `seaborn.heatmap()` para analizar cómo se relacionan las diferentes variables del conjunto de datos.
-
-![Matriz de Correlación](https://drive.google.com/uc?export=view&id=1CYL9AQFprTlbl2WU3NEpf39NIL0es3-u)
-
-5. **Gráfico de Dispersión**: Se generó un gráfico de dispersión con `seaborn.scatterplot()` para visualizar la correlación entre el precio real (`actual_price`) y el precio con descuento (`discounted_price`). Esto permitió analizar cómo los descuentos influyen en el precio final.
-
-![Grafico de dispersion](https://drive.google.com/uc?export=view&id=1AumSbwx5p1k7ziyQMIFOV22t3L67Kl8f)
+**Interacción del Cliente**: Evaluación de la interacción del cliente a través de `rating_count` y `rating`. Se utilizaron histogramas y curvas de densidad (`seaborn.histplot()`) para entender cómo las calificaciones afectan el compromiso de los clientes.
 
 ## Resultados
 
 El análisis realizado produjo varios hallazgos clave que proporcionan una visión profunda de las ventas en Amazon y del comportamiento del cliente. A continuación se presentan los principales resultados:
 
-1. **Categorías con Mayores Ingresos**: Las categorías de productos relacionadas con electrónica y artículos del hogar mostraron los mayores ingresos, lo cual fue evidente a partir de la agrupación y comparación de las ventas. Esto indica que las estrategias de marketing deben priorizar estos sectores para maximizar los beneficios.
+**Categorías con Mayores Ingresos**: Las categorías de productos relacionadas con electrónica y artículos del hogar mostraron los mayores ingresos, lo cual fue evidente a partir de la agrupación y comparación de las ventas. Esto indica que las estrategias de marketing deben priorizar estos sectores para maximizar los beneficios.
 
-2. **Efecto de los Descuentos**: Se observó que las categorías con descuentos más agresivos, como accesorios y moda, generaron un volumen de ventas mayor. Sin embargo, la rentabilidad de estos descuentos varía, ya que en algunos casos no se traduce directamente en mayores ingresos. Los gráficos de barras (`seaborn.barplot()`) ayudaron a ilustrar esta tendencia.
+**Efecto de los Descuentos**: Se observó que las categorías con descuentos más agresivos, como accesorios y moda, generaron un volumen de ventas mayor. Sin embargo, la rentabilidad de estos descuentos varía, ya que en algunos casos no se traduce directamente en mayores ingresos. Los gráficos de barras (`seaborn.barplot()`) ayudaron a ilustrar esta tendencia.
 
-3. **Compromiso del Cliente**: Los productos con mayores `rating_count` y `rating` mostraron una correlación positiva con las ventas. Los histogramas y gráficos de densidad revelaron que la mayoría de los productos con mayores calificaciones también presentaron un alto volumen de ventas, indicando un mayor compromiso del cliente.
+**Compromiso del Cliente**: Los productos con mayores `rating_count` y `rating` mostraron una correlación positiva con las ventas. Los histogramas y gráficos de densidad revelaron que la mayoría de los productos con mayores calificaciones también presentaron un alto volumen de ventas, indicando un mayor compromiso del cliente.
 
 ![calificación promedio por categoría y subcategoría](https://drive.google.com/uc?export=view&id=1XQuMcgWaDOHVJoChzSGZkSXxpp4E5mPa)
 
