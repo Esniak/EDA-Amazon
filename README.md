@@ -144,29 +144,26 @@ El análisis realizado produjo varios hallazgos clave que proporcionan una visi�
 
 ## Conclusión
 
-**Modelo de Regresión Lineal Robusto**: Se desarrolló un modelo para predecir los precios con descuento en función de variables como `actual_price` y  `discount_percentage`. Utilizando `Regresión Lineal Robust()`, se ajustaron los datos y se evaluaron con métricas clave (R², RMSE). Un modelo robusto adicional se aplicó para corregir problemas de heteroscedasticidad, garantizando la fiabilidad de los resultados mediante errores estándar HC3 (`get_robustcov_results()`).
+Esta conclusión analiza diversas categorías de productos vendidos en Amazon, enfocándose en precios, descuentos, compromiso del cliente y reseñas.
 
-![Metrica RL modelo robusto](https://drive.google.com/uc?export=view&id=1erQGjtuLkpz7_Qz93ne0rDzNqiGm6yfM)
+## Principales Hallazgos
 
+### 1. Precios y Descuentos
+- **Electrónica**: Tiene el precio medio más alto por producto antes y después del descuento.
+- **Hogar y cocina** y **Coche y moto**: Son las siguientes con precios medios elevados. Antes de los descuentos, ambas categorías tienen precios similares, pero después de aplicar los descuentos, "Hogar y cocina" ofrece descuentos más altos que "Coche y moto".
+- **Descuentos por Categoría**:
+  - **Computers & Accessories**: Ofrece el mayor descuento promedio del 54.02%.
+  - **Electronics**: Descuento promedio del 50.83%.
+  - La mayoría de los descuentos están en el rango del 40% al 70%.
+  - Subcategorías con mayores porcentajes de descuento: Tecnología portátil, Auriculares y accesorios.
 
-**El análisis entre `actual_price` y `discounted_price` muestra una relación fuerte y lineal.** El modelo desarrollado para predecir el precio con descuento (Y) basado en el precio real (X) resulta en la ecuación **Y = 0.613X + -2.804.** Esto indica que **por cada incremento de 1 Euro en el precio real, el precio con descuento aumenta en 0.613 Euros.**
-
-**Ingresos por Categoría**:
-- Las categorías con los ingresos más altos son **Electronics** con un total de **€3,138,057.00**. **Home&Kitchen** con un total de **€1,042,016.81**. **Computers&Accessories** con un total de **€381,720.62**.
-
-- Las subcategorías más lucrativas incluyen **Ordenadores portátiles**, **Tabletas**, **Cine en casa, TV y vídeo**, **Móviles y accesorios**, **Calefacción, refrigeración y calidad del aire** y **Cocina y electrodomésticos**.
-- La mayoría de los productos están en el rango de **10** a **20€**.
-
-**Descuentos por Categoría**:
-- **Computers&Accessories** ofrece el mayor descuento promedio del **54.02%**.
-- **Electronics** ofrece un descuento promedio del **50.83%**.
-- La mayoría de los descuentos están en el rango del **40% al 70%**.
-- Las subcategorías como **Tecnología portátil** y **Auriculares, auriculares y accesorios** tienen los mayores porcentajes de descuento.
-
-**Compromiso del Cliente**:
-- Las categorías con mayor participación del cliente son **Electronics**, **Home&Kitchen** y **Computers&Accessories**, representando el **97%** de la variedad de productos y con el mayor número de reseñas.
-- Las categorías con mayor satisfacción del cliente son **OfficeProducts** (calificación promedio de 4.31) y **Juguetes y juegos**. La subcategoría **Tabletas** tiene la mayor satisfacción del cliente.
-- La mayoría de los productos tienen una calificación de **4 a 4.5 estrellas** y los clientes generalmente permanecen anónimos al dejar reseñas.
+### 2. Compromiso del Cliente
+- **Participación del Cliente**:
+  - Las categorías con mayor participación son **Electronics**, **Home & Kitchen** y **Computers & Accessories**, representando el 97% de la variedad de productos y con el mayor número de reseñas.
+- **Satisfacción del Cliente**:
+  - Las categorías con mayor satisfacción son **Office Products** (calificación promedio de 4.31) y **Juguetes y juegos**.
+  - La subcategoría **Tabletas** tiene la mayor satisfacción del cliente.
+- La mayoría de los productos tienen una calificación de 4 a 4.5 estrellas y los clientes generalmente permanecen anónimos al dejar reseñas.
 
 ## Recomendaciones
 
@@ -185,6 +182,28 @@ El análisis realizado produjo varios hallazgos clave que proporcionan una visi�
 **Análisis de Reseñas**:
 - Realizar un análisis de texto de las reseñas para identificar áreas específicas de mejora e innovación.
 - Implementar un sistema de retroalimentación para que los clientes expresen sus opiniones de manera efectiva.
+
+# Conclusiones sobre el Modelo
+
+![Metrica RL modelo robusto](https://drive.google.com/uc?export=view&id=1erQGjtuLkpz7_Qz93ne0rDzNqiGm6yfM)
+
+Basándonos en los resultados del modelo de regresión lineal Robusto, muestra un desempeño estadístico sólido. Los altos valores de R² en ambos conjuntos de datos (0.927 en entrenamiento y 0.9186 en prueba) indican que el modelo explica aproximadamente el 92% de la variabilidad en el precio con descuento basándose en el precio real. Esto sugiere que el modelo tiene una buena capacidad predictiva.
+
+El coeficiente de `actual_price` es 0.6126, lo que significa que por cada incremento de 1 € en el precio real, el precio con descuento aumenta en aproximadamente 0.613 €. Este incremento menos que proporcional puede ser interesante desde una perspectiva empresarial, ya que indica que los descuentos no son lineales en relación con el precio original.
+
+## Aplicabilidad Empresarial
+
+- **Estrategias de Precios**: Si una empresa está buscando establecer políticas de descuento basadas en el precio original, este modelo puede ayudar a predecir cómo ajustar los descuentos en función de los cambios en los precios.
+- **Segmentación de Mercado**: Comprender esta relación puede ser útil para segmentar productos o clientes según su sensibilidad al precio y optimizar las ofertas promocionales.
+- **Análisis de Competitividad**: El modelo puede servir para analizar cómo los precios con descuento se comparan con los de la competencia, permitiendo ajustar estrategias para mejorar la posición en el mercado.
+
+## Consideraciones Adicionales
+
+- **Variables Omitidas**: Si bien el modelo muestra un buen ajuste, podría beneficiarse de la inclusión de otras variables que afecten el precio con descuento, como promociones especiales, estacionalidad, o características del producto.
+- **Validación Continua**: Es importante mantener una validación continua del modelo para asegurarse de que sigue siendo relevante en condiciones cambiantes del mercado.
+
+El resultado obtenido ofrece una visión valiosa que puede ser aplicada en la toma de decisiones empresariales. Dado su alto poder explicativo y la relevancia del coeficiente obtenido, el modelo puede ser una herramienta útil para optimizar estrategias de precios y descuentos.
+
 
 ## Deployment (Puesta en marcha)
 
