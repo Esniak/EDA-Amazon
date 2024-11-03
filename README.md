@@ -188,8 +188,8 @@ El análisis realizado produjo varios hallazgos clave que proporcionan una visi�
 
 ## Despliegue
 
-**Despliegue del Modelo**:
-El modelo de regresión lineal desarrollado se guardó en disco para su futuro uso mediante la librería `pickle`. Esto permite reutilizar el modelo sin necesidad de volver a entrenarlo, facilitando su integración en sistemas de recomendación o aplicaciones web. El siguiente código fue utilizado para guardar el modelo:
+**Deployment (Puesta en marcha)**:
+El modelo de regresión lineal Robusto, se guardó en disco para su futuro uso mediante la librería `pickle`. Esto permite reutilizar el modelo sin necesidad de volver a entrenarlo, facilitando su integración en sistemas de recomendación o aplicaciones web. El siguiente código fue utilizado para guardar el modelo:
 
 ```python
 # Guardar el modelo en disco utilizando pickle
