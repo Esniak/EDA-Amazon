@@ -1,5 +1,7 @@
 # Análisis de Datos Exploratorios de Ventas de Amazon (EDA)
 
+![Descripción de la imagen](https://drive.google.com/uc?export=view&id=1GLplIyn0_KiOJ6IMd9FOFKWx6mJmJxCR)
+
 # Resumen del Proyecto
 
 Este proyecto se centra en realizar un Análisis Exploratorio de Datos (EDA) sobre las ventas de productos en Amazon. El objetivo principal es identificar métricas clave como las categorías de productos con mayores ingresos, los descuentos más significativos y los niveles de compromiso del cliente, entre otros aspectos relevantes. A través de este análisis, se busca proporcionar recomendaciones y conclusiones que faciliten la toma de decisiones empresariales, orientando estrategias de ventas y marketing.
