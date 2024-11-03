@@ -186,9 +186,8 @@ El análisis realizado produjo varios hallazgos clave que proporcionan una visi�
 - Realizar un análisis de texto de las reseñas para identificar áreas específicas de mejora e innovación.
 - Implementar un sistema de retroalimentación para que los clientes expresen sus opiniones de manera efectiva.
 
-## Despliegue
+## Deployment (Puesta en marcha)
 
-**Deployment (Puesta en marcha)**:
 El modelo de regresión lineal Robusto, se guardó en disco para su futuro uso mediante la librería `pickle`. Esto permite reutilizar el modelo sin necesidad de volver a entrenarlo, facilitando su integración en sistemas de recomendación o aplicaciones web. El siguiente código fue utilizado para guardar el modelo:
 
 ```python
@@ -203,13 +202,16 @@ except Exception as e:
     raise
 ```
 
-## Link Notebook completo en Inglés
-## Link full Notebook in English
+## Link Notebook completo en Español y Inglés
+## Complete Notebook Link in Spanish and English
 
-Si prefieres revisar el contenido en inglés o tienes alguna dificultad con la versión en español, puedes consultar el notebook completo en inglés en el enlace que te dejamos a continuación:
+Si prefieres revisar el contenido en inglés o tienes alguna dificultad con la versión en español, puedes consultar el notebook completo en Inglés o en Español en los enlaces que te dejo a continuación:
 
-If you prefer to review the content in English or encounter any difficulties with the Spanish version, you can check the complete notebook in English at the link below:
+[Notebook Completo en Español](https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/(EDA)_Ventas_Amazon_EN.ipynb)
 
-[Full Notebook in English](https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/(EDA)_Ventas_Amazon_EN.ipynb)
+If you prefer to review the content in English or encounter any difficulties with the Spanish version, you can consult the complete notebook in English or Spanish using the links provided below:
+
+[Complete Notebook Link in English](https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/(EDA)_Ventas_Amazon_EN.ipynb)
+
 
 
