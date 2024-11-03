@@ -105,7 +105,7 @@ La metodología de este proyecto incluye los siguientes pasos:
 
 5. **Visualización de Datos**: Creación de gráficos de barras (`seaborn.barplot()`), gráficos de dispersión (`seaborn.scatterplot()`), y histogramas (`seaborn.histplot()`) para analizar las tendencias y distribuciones de precios, descuentos y calificaciones de productos.
 
-6. **Modelado y Análisis de Regresión**: Se desarrollaron modelos de regresión lineal utilizando `LinearRegression()` y `statsmodels` para comprender las relaciones entre las variables clave e identificar patrones que apoyen las decisiones de negocio. Finalmente, se creó un modelo de regresión robusto para abordar posibles problemas de heteroscedasticidad, asegurando así la fiabilidad de los resultados. Se evaluaron las métricas del modelo y se aseguraron los supuestos fundamentales mediante validación cruzada y pruebas de heteroscedasticidad.
+6. **Modelado y Análisis de Regresión**: Se desarrollaron modelos de regresión lineal utilizando `LinearRegression()` y `statsmodels` para comprender las relaciones entre las variables clave e identificar patrones que apoyen las decisiones de negocio. **Finalmente, se creó un modelo de regresión robusto** para abordar posibles problemas de heteroscedasticidad, asegurando así la fiabilidad de los resultados. Se evaluaron las métricas del modelo y se aseguraron los supuestos fundamentales mediante validación cruzada y pruebas de heteroscedasticidad.
 
 ## Análisis
 
