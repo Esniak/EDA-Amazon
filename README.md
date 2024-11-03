@@ -203,8 +203,8 @@ except Exception as e:
     raise
 ```
 
-## Link notebook completo en inglés
-## Full Notebook in English
+## Link Notebook completo en Inglés
+## Link full Notebook in English
 
 Si prefieres revisar el contenido en inglés o tienes alguna dificultad con la versión en español, puedes consultar el notebook completo en inglés en el enlace que te dejamos a continuación:
 
