@@ -57,7 +57,7 @@ El conjunto de datos utilizado en este proyecto incluye información detallada s
 
 ## Resumen del Código
 
-Este proyecto está compuesto por cuatro notebooks principales que abarcan limpieza y transformación de datos, análisis exploratorio y visualización, modelado de regresión lineal, y análisis adicional de regresión. A continuación, se presenta un resumen conciso de las funcionalidades y estructuras de código empleadas en cada notebook, incluyendo algunos detalles técnicos clave.
+Este proyecto está compuesto por cuatro notebooks principales que abarcan limpieza y transformación de datos, análisis exploratorio y visualización, modelado de regresión lineal, y análisis adicional de regresión Lineal Robusto. A continuación, se presenta un resumen conciso de las funcionalidades y estructuras de código empleadas en cada notebook.
 
 **Notebook 1: Limpieza y Transformación de Datos**
 
@@ -66,28 +66,31 @@ Este proyecto está compuesto por cuatro notebooks principales que abarcan limpi
 - **Transformaciones Adicionales**: Se creó `discount_amount` calculando la diferencia entre `actual_price` y `discounted_price`, y `discount_percent` se limpió eliminando `%` y dividiendo por 100.
 - **Manejo de Valores Nulos y Duplicados**: Se identificaron valores nulos con `.isna().sum()`, se reemplazaron en `rating_count` con `.fillna()`, y se eliminaron filas duplicadas con `.drop_duplicates()`.
 - **Guardado de Datos**: Se guardaron los dataframes limpios como `amazon_clean.csv` y `reviewers_data.csv` usando `.to_csv()`.
+  
 - **link notebook 1:**  https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/exploratory_data_analysis.ipynb
-
 
 **Notebook 2: Análisis Exploratorio y Visualización de Datos**
 
 - **Visualizaciones Clave**: Se realizaron análisis de precios y descuentos con gráficos de barras (`seaborn.barplot()`), matriz de correlación con `.corr()` visualizada mediante `seaborn.heatmap()`, y gráficos de dispersión para analizar relaciones entre precios (`seaborn.scatterplot()`).
 - **Distribución y Comparación de Variables**: Se generaron histogramas con `seaborn.histplot()` para la distribución de `rating`, `actual_price`, y `discounted_price`, y se analizaron porcentajes de productos por categoría con `.value_counts()` y `.groupby()`.
+  
 - **link notebook 2:**  https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/exploratory_data_visualizations.ipynb
-- 
+  
 **Notebook 3: Análisis de Regresión Lineal**
 
 - **Entrenamiento del Modelo**: Se utilizó `LinearRegression()` de `sklearn` para modelar `actual_price` en función de variables como `discounted_price` y `rating`. Los datos se dividieron en entrenamiento y prueba con `train_test_split()`, y el rendimiento se evaluó mediante métricas como R² y RMSE.
 - **Validación y Supuestos del Modelo**: Se aplicó validación cruzada con `cross_val_score()`, y se verificaron los supuestos del modelo utilizando `statsmodels` para detectar heteroscedasticidad y autocorrelación.
+  
 - **link notebook 3:** https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/RL_modelo.ipynb
-- 
+  
 **Notebook 4: Análisis Regresión Lineal modelo robusto**
 
 - **Ajuste del Modelo y Evaluación**: Se ajustó un modelo OLS con `statsmodels`, y se evaluaron métricas como R² y MAE sobre el conjunto de prueba. Se utilizó `variance_inflation_factor()` para verificar la multicolinealidad.
 - **Modelo Robusto**: Finalmente, se desarrolló un modelo de regresión robusto para corregir posibles problemas de heteroscedasticidad y mejorar la fiabilidad del análisis. Se obtuvieron resultados robustos utilizando errores estándar HC3 con `get_robustcov_results()`.
 - **Visualización de Residuos**: Se generaron gráficos de residuos y se realizaron pruebas de heteroscedasticidad (Breusch-Pagan y White) para asegurar la validez del modelo.
+  
 - **link notebook 4:**  https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/RL_Modelo_Robusto.ipynb
-- 
+  
 ## Metodología
 
 La metodología de este proyecto incluye los siguientes pasos:
