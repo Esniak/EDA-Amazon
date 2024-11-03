@@ -146,9 +146,9 @@ El análisis realizado produjo varios hallazgos clave que proporcionan una visi�
 
 Esta conclusión analiza diversas categorías de productos vendidos en Amazon, enfocándose en precios, descuentos, compromiso del cliente y reseñas.
 
-## Principales Hallazgos
+**Principales Hallazgos**
 
-### 1. Precios y Descuentos
+**1. Precios y Descuentos**
 - **Electrónica**: Tiene el precio medio más alto por producto antes y después del descuento.
 - **Hogar y cocina** y **Coche y moto**: Son las siguientes con precios medios elevados. Antes de los descuentos, ambas categorías tienen precios similares, pero después de aplicar los descuentos, "Hogar y cocina" ofrece descuentos más altos que "Coche y moto".
 - **Descuentos por Categoría**:
@@ -157,7 +157,7 @@ Esta conclusión analiza diversas categorías de productos vendidos en Amazon, e
   - La mayoría de los descuentos están en el rango del 40% al 70%.
   - Subcategorías con mayores porcentajes de descuento: Tecnología portátil, Auriculares y accesorios.
 
-### 2. Compromiso del Cliente
+**2. Compromiso del Cliente**
 - **Participación del Cliente**:
   - Las categorías con mayor participación son **Electronics**, **Home & Kitchen** y **Computers & Accessories**, representando el 97% de la variedad de productos y con el mayor número de reseñas.
 - **Satisfacción del Cliente**:
@@ -165,7 +165,7 @@ Esta conclusión analiza diversas categorías de productos vendidos en Amazon, e
   - La subcategoría **Tabletas** tiene la mayor satisfacción del cliente.
 - La mayoría de los productos tienen una calificación de 4 a 4.5 estrellas y los clientes generalmente permanecen anónimos al dejar reseñas.
 
-## Recomendaciones
+**Recomendaciones**
 
 **Estrategias de Marketing y Promoción**:
 - Continuar invirtiendo en Electrónica y Hogar&Cocina para mantener e incrementar los ingresos.
@@ -191,13 +191,13 @@ Basándonos en los resultados del modelo de regresión lineal Robusto, muestra u
 
 El coeficiente de `actual_price` es 0.6126, lo que significa que por cada incremento de 1 € en el precio real, el precio con descuento aumenta en aproximadamente 0.613 €. Este incremento menos que proporcional puede ser interesante desde una perspectiva empresarial, ya que indica que los descuentos no son lineales en relación con el precio original.
 
-## Aplicabilidad Empresarial
+**Aplicabilidad Empresarial**
 
 - **Estrategias de Precios**: Si una empresa está buscando establecer políticas de descuento basadas en el precio original, este modelo puede ayudar a predecir cómo ajustar los descuentos en función de los cambios en los precios.
 - **Segmentación de Mercado**: Comprender esta relación puede ser útil para segmentar productos o clientes según su sensibilidad al precio y optimizar las ofertas promocionales.
 - **Análisis de Competitividad**: El modelo puede servir para analizar cómo los precios con descuento se comparan con los de la competencia, permitiendo ajustar estrategias para mejorar la posición en el mercado.
 
-## Consideraciones Adicionales
+**Consideraciones Adicionales**
 
 - **Variables Omitidas**: Si bien el modelo muestra un buen ajuste, podría beneficiarse de la inclusión de otras variables que afecten el precio con descuento, como promociones especiales, estacionalidad, o características del producto.
 - **Validación Continua**: Es importante mantener una validación continua del modelo para asegurarse de que sigue siendo relevante en condiciones cambiantes del mercado.
