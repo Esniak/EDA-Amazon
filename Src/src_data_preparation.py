@@ -3,8 +3,7 @@ import pandas as pd
 from IPython.display import display
 
 # utilizo el comando .read_csv para importar el archivo .csv.
-
-amazon = pd.read_csv(r'amazon.csv')
+amazon = pd.read_csv(r'../Data/Raw/amazon.csv') 
 
 # analizo las 5 primeras filas
 amazon.head()
@@ -231,7 +230,7 @@ amazon_clean = amazon[['product_id',
 amazon_clean
 
 # Guardar el DataFrame limpio en un archivo CSV
-amazon_clean.to_csv('/content/amazon_clean.csv', index=False)
+amazon_clean.to_csv('../Data/Processed/amazon_clean.csv', index=False)
 
 # utilizo el comando .str.split() para dividir los valores de cadena en las columnas user_id y user_name usando ',' como delimitador.
 # expand = False insertará cada elemento dividido en una lista.
@@ -272,7 +271,7 @@ reviewers
 reviewers.isna().sum()
 
 # Guardar el DataFrame reviewers en un archivo CSV
-reviewers.to_csv('reviewers_data.csv', index=False)
+reviewers.to_csv('../Data/Processed/reviewers_data.csv', index=False)
 
 # Seleccionar las columnas necesarias para el modelo
 columns_to_select = ['actual_price', 'discounted_price', 'discount_percentage', 'rating', 'rating_count']
@@ -290,4 +289,4 @@ print("\nVariable y (objetivo):")
 display(y.head().to_frame())
 
 # Guardar el resultado en un nuevo archivo CSV para el modelo
-filtered_data.to_csv('/content/amazon_dataset_final.csv', index=False)
+filtered_data.to_csv('../Data/Processed/amazon_dataset_final.csv', index=False)
