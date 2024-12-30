@@ -1,9 +1,9 @@
 
 import pandas as pd
-from IPython.display import display
 
 # utilizo el comando .read_csv para importar el archivo .csv.
-amazon = pd.read_csv(r'../Data/Raw/amazon.csv') 
+ruta_absoluta = '/Users/kaabil/Documents/EDA Amazon/Data/Raw/amazon.csv'
+amazon = pd.read_csv(ruta_absoluta) 
 
 # analizo las 5 primeras filas
 amazon.head()
@@ -283,10 +283,10 @@ y = filtered_data['discounted_price']
 
 # Mostrar en pantalla las variables X e y de forma estructurada
 print("Variables X (entrada):")
-display(X.head())
+
 
 print("\nVariable y (objetivo):")
-display(y.head().to_frame())
+
 
 # Guardar el resultado en un nuevo archivo CSV para el modelo
 filtered_data.to_csv('../Data/Processed/amazon_dataset_final.csv', index=False)

@@ -9,12 +9,18 @@ import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from statsmodels.stats.diagnostic import het_breuschpagan, het_white
 
-# Paso 1: Importar el dataset
-amazon_correl = pd.read_csv(r'/content/amazon_dataset_final.csv')
+# utilizo el comando .read_csv para importar el archivo .csv.
+ruta_absoluta = '/Users/kaabil/Documents/EDA Amazon/Data/Processed/amazon_dataset_final.csv'
+amazon = pd.read_csv(ruta_absoluta) 
 
-# Paso 2: Selección de características y variable objetivo (solo 'actual_price')
+# python
+# Suponiendo que ya tienes tu DataFrame principal en una variable llamada 'amazon',
+# define amazon_correl para que contenga las columnas que necesitas:
+amazon_correl = amazon[['actual_price', 'discounted_price']].dropna()
+
+# Ahora puedes seleccionar X e Y sin error:
 X = amazon_correl[['actual_price']]
-Y = amazon_correl['discounted_price']
+Y = amazon_correl['discounted_price'] 
 
 # Paso 3: Dividir el conjunto de datos en entrenamiento y prueba
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
