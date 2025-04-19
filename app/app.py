@@ -66,7 +66,7 @@ with st.sidebar:
 if submit:
     X_new = np.array([[actual_price, rating]])
     X_scaled = scaler.transform(X_new)
-    X_scaled_const = sm.add_constant(X_scaled)
+    X_scaled_const = sm.add_constant(X_scaled, has_constant='add')
     discounted_price_pred = float(model.predict(X_scaled_const)[0])
 
     col1, col2 = st.columns(2)
