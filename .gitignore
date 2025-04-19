@@ -1,0 +1,17 @@
+# Ignorar entorno virtual
+env/
+# Ignorar archivos temporales de macOS
+.DS_Store
+Data/.DS_Store
+Data/Processed/.DS_Store
+Data/Raw/.DS_Store
+Models/.DS_Store
+Src/.DS_Store
+# Ignorar archivos de Jupyter y Python temporales
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+# Ignorar archivos de configuración locales
+.envrc

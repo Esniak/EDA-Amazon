@@ -1,12 +1,23 @@
-
-numpy==1.23.5
+numpy>=1.26.0
 
 pandas==1.5.3
 
-matplotlib==3.6.2
+matplotlib>=3.8.0
 
 seaborn==0.12.2
 
 scikit-learn==1.2.2
 
 statsmodels==0.14.0
+
+streamlit==1.32.2
+
+streamlit_drawable_canvas==0.8.0
+
+plotly==5.19.0
+
+jupyter==1.0.0
+
+ipywidgets==8.1.2
+
+openpyxl==3.1.2
