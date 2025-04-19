@@ -24,5 +24,5 @@ X_train_const = sm.add_constant(X_train_s)
 ols_model = sm.OLS(y_train, X_train_const).fit(cov_type='HC3')
 
 # Guardar scaler y modelo
-joblib.dump(scaler, 'scaler.pkl')
-joblib.dump(ols_model, 'model.pkl')
+joblib.dump(scaler, '../Data/Preprocess/scaler.pkl')
+joblib.dump(ols_model, '../Models/model.pkl')
