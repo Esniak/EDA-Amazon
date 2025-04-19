@@ -16,8 +16,11 @@ import statsmodels.api as sm
 # Utilidades
 # --------------------------------------------------
 @st.cache_resource  # carga una única vez
-def load_artifacts(model_path: str = "Models/model.pkl", scaler_path: str = "Data/Preprocess/scaler.pkl"):
-    """Carga modelo y scaler desde las rutas especificadas."""
+def load_artifacts(model_path: str = None, scaler_path: str = None):
+    """Carga modelo y scaler desde rutas absolutas relativas a este archivo, robusto a cualquier working directory."""
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    model_path = model_path or os.path.join(base_dir, "Models", "model.pkl")
+    scaler_path = scaler_path or os.path.join(base_dir, "Data", "Preprocess", "scaler.pkl")
     model = joblib.load(model_path)
     scaler = joblib.load(scaler_path)
     return model, scaler
@@ -48,8 +51,8 @@ st.markdown(
 )
 
 # Cargar artefactos
-MODEL_PATH = "Models/model.pkl"
-SCALER_PATH = "Data/Preprocess/scaler.pkl"
+MODEL_PATH = None  # Usar None para que la función calcule la ruta robusta
+SCALER_PATH = None
 model, scaler = load_artifacts(MODEL_PATH, SCALER_PATH)
 
 # Sidebar – hiperparámetros del input
