@@ -14,11 +14,16 @@ def cargar_modelos(dir_path="Model"):
     especialistas, global_model = {}, None
     for pkl in glob.glob(os.path.join(dir_path, "model_*.pkl")):
         base = os.path.basename(pkl)
-        if base == "model_global.pkl":
-            global_model = joblib.load(pkl)
-        else:
-            key = base.replace("model_", "").replace(".pkl", "").replace("_", "&")
-            especialistas[key] = joblib.load(pkl)
+        try:
+            if base == "model_global.pkl":
+                global_model = joblib.load(pkl)
+            else:
+                key = base.replace("model_", "").replace(".pkl", "").replace("_", "&")
+                especialistas[key] = joblib.load(pkl)
+        except ModuleNotFoundError as e:
+            st.error(f"Error al cargar el modelo {base}: {e}")
+        except Exception as e:
+            st.error(f"Error inesperado al cargar el modelo {base}: {e}")
     return especialistas, global_model
 
 modelos_especialistas, modelo_global = cargar_modelos()
