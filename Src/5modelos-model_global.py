@@ -38,7 +38,7 @@ keep_cats = [
 ]
 
 # ---------- Cargar datos ----------
-df = pd.read_csv("Data/Processed/amazon_clean.csv")
+df = pd.read_csv("Data/Processed/amazon_final_5modelos.csv")
 if "main_category" not in df.columns:
     raise ValueError("La columna 'main_category' no existe en el DataFrame. Revisa el archivo de datos.")
 
