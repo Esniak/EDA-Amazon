@@ -28,4 +28,4 @@ xgboost
 
 category_encoders==2.6.3
 
-altair
+altair 
