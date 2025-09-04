@@ -55,6 +55,19 @@ El conjunto de datos utilizado en este proyecto incluye información detallada s
 - **Img_link**: Enlace a la imagen del producto.
 - **Product_link**: Enlace a la página del producto en Amazon.
 
+### Integración de múltiples archivos CSV
+
+Si se dispone de varios archivos con datos brutos en la carpeta `Data/Raw/`,
+es posible combinarlos en un único dataset ejecutando:
+
+```bash
+python Src/merge_csv.py
+```
+
+El script generará `Data/Preprocess/merged_raw.csv` con la concatenación de
+todos los archivos, facilitando los pasos posteriores de limpieza, EDA y
+modelado.
+
 ## Resumen del Código
 
 Este proyecto está compuesto por cuatro notebooks principales que abarcan limpieza y transformación de datos, análisis exploratorio y visualización, modelado de regresión lineal, y análisis adicional de regresión Lineal Robusto. A continuación, se presenta un resumen conciso de las funcionalidades y estructuras de código empleadas en cada notebook.
