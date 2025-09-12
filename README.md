@@ -92,7 +92,7 @@ Este proyecto está compuesto por cuatro notebooks principales que abarcan limpi
 **Notebook 3: Análisis de Regresión Lineal**
 
 - **Entrenamiento del Modelo**: Se utilizó `LinearRegression()` de `sklearn` para modelar `actual_price` en función de variables como `discounted_price` y `rating`. Los datos se dividieron en entrenamiento y prueba con `train_test_split()`, y el rendimiento se evaluó mediante métricas como R² y RMSE.
-- **Validación y Supuestos del Modelo**: Se aplicó validación cruzada con `cross_val_score()`, y se verificaron los supuestos del modelo utilizando `statsmodels` para detectar heteroscedasticidad y autocorrelación.
+- **Validación y Supuestos del Modelo**: Se aplicó validación cruzada with `cross_val_score()`, y se verificaron los supuestos del modelo utilizando `statsmodels` para detectar heteroscedasticidad y autocorrelación.
   
 - **link notebook 3:** https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/RL_modelo.ipynb
   
@@ -247,7 +247,17 @@ If you prefer to review the content in English or encounter any difficulties wit
 
 ## Datos grandes
 
-El archivo principal Amazon-Products.csv está disponible en Google Drive:
+El archivo original `Amazon-Products.csv` ha sido dividido en dos partes para cumplir con las restricciones de GitHub (<100MB por archivo):
+- `Amazon-Products.csv.partaa`
+- `Amazon-Products.csv.partab`
+
+Para reconstruir el archivo completo en tu entorno local, ejecuta:
+
+```sh
+cat Amazon-Products.csv.partaa Amazon-Products.csv.partab > Amazon-Products.csv
+```
+
+También puedes descargar el archivo completo desde Google Drive:
 [Descargar Amazon-Products.csv](https://drive.google.com/file/d/1nRCvKsXDqdaa1foiY7T_fgz7LEQQBGyJ/view?usp=sharing)
 
 

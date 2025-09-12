@@ -11,6 +11,23 @@ import pandas as pd
 import streamlit as st
 import joblib
 import statsmodels.api as sm
+import shutil
+
+# --------------------------------------------------
+# Unir archivos divididos automáticamente
+# --------------------------------------------------
+PART1 = os.path.join(os.path.dirname(__file__), '..', 'Data', 'Raw', 'Data Raw csv_files', 'Amazon-Products.csv.partaa')
+PART2 = os.path.join(os.path.dirname(__file__), '..', 'Data', 'Raw', 'Data Raw csv_files', 'Amazon-Products.csv.partab')
+FULL = os.path.join(os.path.dirname(__file__), '..', 'Data', 'Raw', 'Data Raw csv_files', 'Amazon-Products.csv')
+
+if os.path.exists(PART1) and os.path.exists(PART2):
+    # Solo unir si el archivo completo no existe
+    if not os.path.exists(FULL):
+        with open(FULL, 'wb') as f_out:
+            for part in [PART1, PART2]:
+                with open(part, 'rb') as f_in:
+                    shutil.copyfileobj(f_in, f_out)
+        print(f"Archivo unido correctamente: {FULL}")
 
 # --------------------------------------------------
 # Utilidades
