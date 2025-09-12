@@ -34,7 +34,7 @@ def cargar_modelos(dir_path="Model"):
             if base == "model_global.pkl":
                 global_model = joblib.load(pkl)
             else:
-                key = base.replace("model_", "").replace(".pkl", "").replace("_", "&")
+                key = base.replace("model_", "").replace(".pkl", "").replace("_", " ").title()
                 especialistas[key] = joblib.load(pkl)
         except ModuleNotFoundError as e:
             st.error(f"Error al cargar el modelo {base}: {e}")
@@ -89,11 +89,9 @@ with tabs[0]:
             log_rating_count = np.log1p(rating_count)
 
             df_in = pd.DataFrame([{
-                "actual_price_eur":     precio_base,
-                "rating":               rating,
-                "log_rating_count":     log_rating_count,
-                "price_per_rating":     price_per_rating,
-                "text_len_about":       text_len_about,
+                "actual_price":     precio_base,
+                "ratings":               rating,
+                "no_of_ratings":     rating_count,
                 "sub_category":         sub_cat
             }])
 
