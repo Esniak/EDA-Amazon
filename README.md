@@ -245,5 +245,10 @@ If you prefer to review the content in English or encounter any difficulties wit
 
 [Complete Notebook Link in English](https://github.com/Esniak/-EDA-Amazon-Sales/blob/main/Notebooks/(EDA)_Ventas_Amazon_EN.ipynb)
 
+## Datos grandes
+
+El archivo principal Amazon-Products.csv está disponible en Google Drive:
+[Descargar Amazon-Products.csv](https://drive.google.com/file/d/1nRCvKsXDqdaa1foiY7T_fgz7LEQQBGyJ/view?usp=sharing)
+
 
 
